@@ -32,39 +32,50 @@ a {
     text-decoration: none;
 }
 
-/* === ENCABEZADO Y NAVEGACIÓN === */
+/* === ENCABEZADO Y NAVEGACIÓN AJUSTADO === */
 header {
     background: #333;
     color: #fff;
-    padding: 1rem 0;
-    border-bottom: #007bff 4px solid;
+    padding: 0.5rem 1rem; /* Reduce la altura del encabezado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #007bff 2px solid; /* Hace el borde inferior más delgado */
 }
 
 header .logo {
-    float: left;
+    font-size: 1.3rem; /* Reduce el tamaño del logo */
+    font-weight: bold;
     margin: 0;
 }
 
 header nav {
-    float: right;
-    margin-top: 10px;
+    margin-left: auto; /* Empuja el menú hacia la derecha */
 }
 
 header nav ul {
+    display: flex;
+    justify-content: flex-end; /* Asegura que los botones estén alineados a la derecha */
+    gap: 15px; /* Ajusta el espacio entre los elementos del menú */
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 header nav ul li {
-    display: inline;
-    padding: 0 15px;
+    display: inline-block;
 }
 
-header a {
+header nav ul li a {
     color: #fff;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: normal; /* Reduce el grosor del texto */
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    text-decoration: none;
+    padding: 0.3rem 0.8rem; /* Reduce el margen interno de los enlaces */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* === PIE DE PÁGINA === */
@@ -103,17 +114,44 @@ footer {
     margin-top: 10px;
 }
 
-/* === PÁGINA DE INICIO === */
+/* === HERO SECTION AJUSTADO === */
 .hero {
-    background: #333;
-    color: #fff;
-    padding: 4rem 0;
-    text-align: center;
+    background: url('../img/hero.png') no-repeat center center; /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el área */
+    color: #fff; /* Asegura que el texto sea blanco */
+    padding: 3rem 0; /* Ajusta la altura del hero */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: flex-start; /* Alinea horizontalmente el contenido a la izquierda */
+    padding-left: 2rem; /* Agrega espacio desde el borde izquierdo */
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    color: #fff;
+    font-size: 2rem; /* Reduce el tamaño del texto principal */
+    margin-bottom: 1rem;
+    color: #fff; /* Asegura que el texto principal sea blanco */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.hero p {
+    font-size: 1rem; /* Ajusta el tamaño del texto secundario */
+    margin-bottom: 1.5rem;
+    color: #fff; /* Asegura que el texto secundario sea blanco */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.hero .btn-principal {
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+    font-size: 0.9rem; /* Reduce el tamaño del texto del botón */
+    background: #007bff; /* Color del botón */
+    color: #fff; /* Asegura que el texto del botón sea blanco */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: left; /* Alinea el botón a la izquierda */
+}
+
+.hero .btn-principal:hover {
+    background: #0056b3; /* Color del botón al pasar el cursor */
 }
 
 .section-title {
